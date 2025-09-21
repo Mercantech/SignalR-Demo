@@ -10,6 +10,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080
       - ASPIRE_DASHBOARD_ENABLED=true
+      - DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
       - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
       - DOTNET_EnableDiagnostics=0
       - DOTNET_UsePollingFileWatcher=true

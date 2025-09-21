@@ -102,8 +102,9 @@ ASPNETCORE_URLS=http://+:8080
 - Verificer .NET version compatibility
 
 **File watcher fejl:**
-- "inotify instances has been reached" - løses automatisk med optimerede Docker settings
-- Container har nu øgede file descriptor limits
+- "inotify instances has been reached" - løses med `DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false`
+- Deaktiverer config reloading i containere (ikke nødvendigt)
+- Container har også øgede file descriptor limits som backup
 
 ### 8. Performance Tips
 
