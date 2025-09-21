@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  signalr-demo:
+    build: .
+    container_name: signalr-demo
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - signalr-network
+
+networks:
+  signalr-network:
+    driver: bridge

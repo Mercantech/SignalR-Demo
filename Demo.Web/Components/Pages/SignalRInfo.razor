@@ -1,0 +1,216 @@
+@page "/signalr-info"
+@page "/"
+
+<PageTitle>SignalR Information</PageTitle>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4 text-primary mb-4">SignalR Demo & Information</h1>
+            
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Hvad er SignalR?</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead">
+                        SignalR er en Microsoft teknologi, der gør det nemt at tilføje real-time funktionalitet til web applikationer.
+                    </p>
+                    <p>
+                        SignalR håndterer automatisk forbindelsesstyring og giver dig mulighed for at sende beskeder til alle forbundne klienter 
+                        eller til specifikke grupper af klienter i realtid. Det understøtter automatisk fallback til forskellige transportmetoder 
+                        (WebSockets, Server-Sent Events, Long Polling) afhængigt af hvad klienten understøtter.
+                    </p>
+                    <h5>Hovedfunktioner:</h5>
+                    <ul>
+                        <li><strong>Real-time kommunikation:</strong> Send beskeder øjeblikkeligt til forbundne klienter</li>
+                        <li><strong>Automatisk forbindelsesstyring:</strong> Håndterer forbindelser og genforbindelser automatisk</li>
+                        <li><strong>Gruppefunktionalitet:</strong> Send beskeder til specifikke grupper af brugere</li>
+                        <li><strong>Skalerbarhed:</strong> Understøtter backplane løsninger til at skale på tværs af servere</li>
+                        <li><strong>Cross-platform:</strong> Fungerer med .NET, JavaScript, og andre sprog</li>
+                        <li><strong>Automatisk fallback:</strong> Vælger automatisk den bedste transportmetode</li>
+                        <li><strong>Connection management:</strong> Håndterer forbindelser, genforbindelser og fejl automatisk</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">SignalR vs. WebSockets</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-success">SignalR Fordele:</h5>
+                            <ul>
+                                <li><strong>Højere abstraktion:</strong> Nemmere at implementere</li>
+                                <li><strong>Automatisk fallback:</strong> Vælger bedste transport automatisk</li>
+                                <li><strong>Connection management:</strong> Håndterer forbindelser automatisk</li>
+                                <li><strong>Gruppefunktionalitet:</strong> Indbygget gruppe management</li>
+                                <li><strong>Skalerbarhed:</strong> Backplane support for clustering</li>
+                                <li><strong>Cross-browser support:</strong> Fungerer i alle browsere</li>
+                                <li><strong>Error handling:</strong> Automatisk fejlhåndtering og genforbindelse</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-warning">WebSockets Fordele:</h5>
+                            <ul>
+                                <li><strong>Direkte kontrol:</strong> Fuld kontrol over forbindelsen</li>
+                                <li><strong>Lavere overhead:</strong> Mindre protokol overhead</li>
+                                <li><strong>Bedre performance:</strong> Direkte binær kommunikation</li>
+                                <li><strong>Fleksibilitet:</strong> Kan implementere custom protokoller</li>
+                                <li><strong>Mindre dependencies:</strong> Ingen eksterne biblioteker</li>
+                                <li><strong>Custom protocols:</strong> Kan implementere egne protokoller</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="alert alert-info mt-3">
+                        <strong>Hvornår bruge hvad?</strong><br>
+                        <strong>SignalR:</strong> Når du vil have hurtig udvikling, automatisk håndtering og cross-browser kompatibilitet.<br>
+                        <strong>WebSockets:</strong> Når du har brug for maksimal performance, direkte kontrol eller custom protokoller.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title mb-0">SignalR vs. Socket.io</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-info">SignalR (Microsoft):</h5>
+                            <ul>
+                                <li><strong>Sprog:</strong> C#/.NET, JavaScript</li>
+                                <li><strong>Ekosystem:</strong> Microsoft .NET stack</li>
+                                <li><strong>Performance:</strong> Høj performance på .NET</li>
+                                <li><strong>Type safety:</strong> Stærk typing i C#</li>
+                                <li><strong>Integration:</strong> Perfekt med ASP.NET Core</li>
+                                <li><strong>Skalering:</strong> Azure SignalR Service</li>
+                                <li><strong>Læringskurve:</strong> Nem hvis du kender .NET</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-warning">Socket.io (JavaScript):</h5>
+                            <ul>
+                                <li><strong>Sprog:</strong> JavaScript/Node.js</li>
+                                <li><strong>Ekosystem:</strong> Node.js/JavaScript stack</li>
+                                <li><strong>Performance:</strong> Høj performance på Node.js</li>
+                                <li><strong>Fleksibilitet:</strong> Meget fleksibel og konfigurerbar</li>
+                                <li><strong>Community:</strong> Stor community og mange plugins</li>
+                                <li><strong>Cross-platform:</strong> Fungerer med mange sprog</li>
+                                <li><strong>Læringskurve:</strong> Nem hvis du kender JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning mt-3">
+                        <strong>Sammenligning:</strong><br>
+                        <strong>SignalR:</strong> Bedst til .NET projekter, enterprise apps, og når du vil have en komplet løsning.<br>
+                        <strong>Socket.io:</strong> Bedst til JavaScript/Node.js projekter, web apps, og når du vil have maksimal fleksibilitet.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">Hub Pattern</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead">
+                        Hub pattern er den primære måde at organisere SignalR funktionalitet på.
+                    </p>
+                    <p>
+                        En Hub er en klasse, der arver fra <code>Hub</code> klassen og fungerer som en centraliseret endpoint 
+                        for real-time kommunikation. Hubs giver dig mulighed for at definere metoder, som klienter kan kalde, 
+                        og håndtere forbindelser og gruppemedlemskab.
+                    </p>
+                    <h5>Hub funktioner:</h5>
+                    <ul>
+                        <li><strong>Metode definition:</strong> Definer metoder, som klienter kan kalde via SignalR</li>
+                        <li><strong>Forbindelseshåndtering:</strong> <code>OnConnectedAsync()</code> og <code>OnDisconnectedAsync()</code></li>
+                        <li><strong>Gruppestyring:</strong> Tilføj/fjern klienter fra grupper</li>
+                        <li><strong>Beskedudsendelse:</strong> Send beskeder til alle, specifikke klienter eller grupper</li>
+                        <li><strong>Context information:</strong> Adgang til forbindelsesinformation og brugerdata</li>
+                    </ul>
+                    <div class="alert alert-info">
+                        <strong>Eksempel på Hub metode:</strong><br>
+                        <code>public async Task SendMessage(string user, string message)</code><br>
+                        <small>Denne metode kan kaldes fra klienten og sender beskeden til alle forbundne klienter.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="card-title mb-0">Transportmetoder</h3>
+                </div>
+                <div class="card-body">
+                    <p>SignalR bruger automatisk den bedste tilgængelige transportmetode:</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6><i class="fas fa-wifi text-primary"></i> WebSockets</h6>
+                            <p><strong>Bedste valg</strong> - Fuld duplex kommunikation, lav latency, høj performance.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6><i class="fas fa-arrow-down text-success"></i> Server-Sent Events</h6>
+                            <p><strong>Fallback</strong> - Server til klient kommunikation, god til live updates.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6><i class="fas fa-sync text-warning"></i> Long Polling</h6>
+                            <p><strong>Sidste udvej</strong> - Simpel HTTP polling, fungerer overalt.</p>
+                        </div>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Automatisk valg:</strong> SignalR tester automatisk hvilke transportmetoder der er tilgængelige og vælger den bedste. Du behøver ikke bekymre dig om kompatibilitet!
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="card-title mb-0">Demo Applikation</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        I denne demo applikation kan du se SignalR i aktion med et simpelt chat system. 
+                        Funktionerne inkluderer:
+                    </p>
+                    <ul>
+                        <li>Real-time chat med andre forbundne brugere</li>
+                        <li>Typing indicators ("X skriver...")</li>
+                        <li>Automatisk forbindelseshåndtering</li>
+                        <li>Bruger join/leave notifikationer</li>
+                        <li>Enter-tast til at sende beskeder</li>
+                        <li>Moderne chat UI med input i bunden</li>
+                    </ul>
+                    <a href="/chat" class="btn btn-primary btn-lg">
+                        <i class="fas fa-comments"></i> Prøv Chat Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title mb-0">Teknisk Implementation</h3>
+                </div>
+                <div class="card-body">
+                    <h5>Server-side (API):</h5>
+                    <ul>
+                        <li><code>ChatHub.cs</code> - Hub klasse med chat funktionalitet</li>
+                        <li>SignalR service registrering i <code>Program.cs</code></li>
+                        <li>CORS konfiguration for cross-origin requests</li>
+                        <li>Hub mapping til <code>/chathub</code> endpoint</li>
+                    </ul>
+                    
+                    <h5>Client-side (Blazor):</h5>
+                    <ul>
+                        <li>SignalR Client forbindelse</li>
+                        <li>Real-time UI opdateringer</li>
+                        <li>Event handling for forbindelser og beskeder</li>
+                        <li>Gruppe management funktionalitet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
