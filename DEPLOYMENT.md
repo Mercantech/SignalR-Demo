@@ -106,6 +106,11 @@ ASPNETCORE_URLS=http://+:8080
 - Deaktiverer config reloading i containere (ikke nødvendigt)
 - Container har også øgede file descriptor limits som backup
 
+**Project file not found fejl:**
+- "Project file '/src/Demo.ApiService/Demo.ApiService.csproj' was not found" - løses med korrekt mappestruktur
+- Aspire kræver at projektfilerne er tilgængelige i runtime
+- Dockerfile kopierer nu hele source structure til `/src`
+
 ### 8. Performance Tips
 
 #### For production:

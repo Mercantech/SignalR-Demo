@@ -17,17 +17,20 @@ COPY . .
 
 # Build the entire Aspire application
 WORKDIR "/src"
-RUN dotnet build "Demo.AppHost/Demo.AppHost.csproj" -c Release -o /app/build --no-restore
+RUN dotnet build "Demo.AppHost/Demo.AppHost.csproj" -c Release -o /src/build --no-restore
 
 # Publish stage
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
-WORKDIR /app
+WORKDIR /src
 
 # Install curl for health checks
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
+# Copy the entire source code structure
+COPY --from=build /src .
+
 # Copy the built Aspire application
-COPY --from=build /app/build .
+COPY --from=build /src/build/* ./build/
 
 # Expose ports for all services
 # 8080 - Aspire Dashboard (mapped to 15000 externally)
@@ -50,4 +53,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:8080/health || exit 1
 
 # Start the Aspire application (this will start all services)
-ENTRYPOINT ["dotnet", "Demo.AppHost.dll"]
+ENTRYPOINT ["dotnet", "build/Demo.AppHost.dll"]
