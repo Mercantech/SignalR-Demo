@@ -2,6 +2,13 @@
 
 ## 🚀 Deployment til Dokploy
 
+### Aspire Deployment Fordele
+- **Enkelt Container**: Hele stacken kører i én container
+- **Service Discovery**: Automatisk service discovery mellem API og Web
+- **Health Monitoring**: Aspire Dashboard overvåger alle services
+- **Unified Logging**: Centraliseret logging for alle services
+- **Easy Scaling**: Nem at scale hele stacken sammen
+
 ### Forudsætninger
 - Dokploy server kørende
 - Docker installeret på Dokploy serveren
@@ -37,12 +44,14 @@ ASPNETCORE_URLS=http://+:8080
 ### 3. Port Konfiguration
 
 #### I Dokploy Dashboard:
-- **Port 8080**: Main application (Aspire Dashboard)
-- **Port 8081**: SignalR Hubs
+- **Port 8080**: Aspire Dashboard (Service monitoring)
+- **Port 8081**: API Service (SignalR Hubs og REST API)
+- **Port 8082**: Web Frontend (Blazor applikation)
 
 #### Firewall/Proxy Settings:
-- Åbn port 8080 for hovedapplikationen
-- Åbn port 8081 for SignalR forbindelser
+- Åbn port 8080 for Aspire Dashboard
+- Åbn port 8081 for API og SignalR forbindelser
+- Åbn port 8082 for hovedapplikationen (Blazor)
 
 ### 4. Deployment
 
@@ -59,10 +68,12 @@ ASPNETCORE_URLS=http://+:8080
 ### 5. Verificering
 
 #### Efter deployment:
-1. **Aspire Dashboard**: `http://your-server:8080`
-2. **SignalR Info**: `http://your-server:8080/signalr-info`
-3. **Chat Demo**: `http://your-server:8080/chat`
-4. **Status Monitor**: `http://your-server:8080/status`
+1. **Aspire Dashboard**: `http://your-server:8080` - Overvåg alle services
+2. **Web Frontend (Blazor)**: `http://your-server:8082` - Hovedapplikation
+3. **API Service**: `http://your-server:8081` - SignalR Hubs og API
+4. **SignalR Info**: `http://your-server:8082/signalr-info`
+5. **Chat Demo**: `http://your-server:8082/chat`
+6. **Status Monitor**: `http://your-server:8082/status`
 
 ### 6. Monitoring
 
