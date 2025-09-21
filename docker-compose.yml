@@ -3,9 +3,9 @@ services:
     build: .
     container_name: signalr-demo
     ports:
-      - "8080:8080"  # Aspire Dashboard
-      - "8081:8081"  # API Service (SignalR Hubs)
-      - "8082:8082"  # Web Frontend (Blazor)
+      - "15000:8080"  # Aspire Dashboard
+      - "15001:8081"  # API Service (SignalR Hubs)
+      - "15002:8082"  # Web Frontend (Blazor)
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080

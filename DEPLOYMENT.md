@@ -44,14 +44,14 @@ ASPNETCORE_URLS=http://+:8080
 ### 3. Port Konfiguration
 
 #### I Dokploy Dashboard:
-- **Port 8080**: Aspire Dashboard (Service monitoring)
-- **Port 8081**: API Service (SignalR Hubs og REST API)
-- **Port 8082**: Web Frontend (Blazor applikation)
+- **Port 15000**: Aspire Dashboard (Service monitoring)
+- **Port 15001**: API Service (SignalR Hubs og REST API)
+- **Port 15002**: Web Frontend (Blazor applikation)
 
 #### Firewall/Proxy Settings:
-- Åbn port 8080 for Aspire Dashboard
-- Åbn port 8081 for API og SignalR forbindelser
-- Åbn port 8082 for hovedapplikationen (Blazor)
+- Åbn port 15000 for Aspire Dashboard
+- Åbn port 15001 for API og SignalR forbindelser
+- Åbn port 15002 for hovedapplikationen (Blazor)
 
 ### 4. Deployment
 
@@ -68,12 +68,12 @@ ASPNETCORE_URLS=http://+:8080
 ### 5. Verificering
 
 #### Efter deployment:
-1. **Aspire Dashboard**: `http://your-server:8080` - Overvåg alle services
-2. **Web Frontend (Blazor)**: `http://your-server:8082` - Hovedapplikation
-3. **API Service**: `http://your-server:8081` - SignalR Hubs og API
-4. **SignalR Info**: `http://your-server:8082/signalr-info`
-5. **Chat Demo**: `http://your-server:8082/chat`
-6. **Status Monitor**: `http://your-server:8082/status`
+1. **Aspire Dashboard**: `http://your-server:15000` - Overvåg alle services
+2. **Web Frontend (Blazor)**: `http://your-server:15002` - Hovedapplikation
+3. **API Service**: `http://your-server:15001` - SignalR Hubs og API
+4. **SignalR Info**: `http://your-server:15002/signalr-info`
+5. **Chat Demo**: `http://your-server:15002/chat`
+6. **Status Monitor**: `http://your-server:15002/status`
 
 ### 6. Monitoring
 
