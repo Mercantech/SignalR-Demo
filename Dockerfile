@@ -30,9 +30,9 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 COPY --from=build /app/build .
 
 # Expose ports for all services
-# 8080 - Aspire Dashboard
-# 8081 - API Service (SignalR Hubs)
-# 8082 - Web Frontend (Blazor)
+# 8080 - Aspire Dashboard (mapped to 15000 externally)
+# 8081 - API Service (mapped to 15001 externally)
+# 8082 - Web Frontend (mapped to 15002 externally)
 EXPOSE 8080
 EXPOSE 8081
 EXPOSE 8082
