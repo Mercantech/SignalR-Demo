@@ -40,6 +40,9 @@ EXPOSE 8082
 # Set environment variables
 ENV ASPNETCORE_ENVIRONMENT=Production
 ENV ASPNETCORE_URLS=http://+:8080
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+ENV DOTNET_EnableDiagnostics=0
+ENV DOTNET_UsePollingFileWatcher=true
 
 # Health check for Aspire dashboard
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \

@@ -101,6 +101,10 @@ ASPNETCORE_URLS=http://+:8080
 - Tjek Dockerfile syntax
 - Verificer .NET version compatibility
 
+**File watcher fejl:**
+- "inotify instances has been reached" - løses automatisk med optimerede Docker settings
+- Container har nu øgede file descriptor limits
+
 ### 8. Performance Tips
 
 #### For production:
